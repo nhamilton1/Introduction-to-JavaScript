@@ -157,16 +157,16 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 let computer = Math.random();
 if(computer <= 0.34){
   computer = 'rock';
-} else if (computer <= 0.67){
+}else if (computer <= 0.67){
   computer = 'paper';
-} else if (computer > 0.67){
+}else if (computer > 0.67){
   computer = 'scissors';
 }
 
 function game(user, computer){
   if (user === computer){
     return `it's a tie`;
-  } else if (user === 'rock' && computer === 'scissor'){
+  }else if (user === 'rock' && computer === 'scissor'){
     return 'you win!';
   }else if (user === 'paper' && computer === 'rock'){
     return 'you win!';
@@ -177,6 +177,7 @@ function game(user, computer){
   }
 }
 
+console.log('task 4', game('rock', computer));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -190,9 +191,9 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(miles){
+function miles(milesMultiply){
   let kmToMiles = 0.621371;
-  return (miles * kmToMiles);
+  return (milesMultiply * kmToMiles);
 }
 
 
@@ -205,8 +206,9 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(){
-
+function feet(feetToCm){
+ let centemeters = 30.48;
+ return (feetToCm / centemeters);
 }
 
 
@@ -243,13 +245,12 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-  let letterGrade;
+function grade(letterGrade){
     if (letterGrade >= 90){
       return ('you got an A');
-    } else if (letterGrade <= 89){
+    } else if (letterGrade >= 80){
       return ('you got a B');
-    } else if (letterGrade <= 79){
+    } else if (letterGrade >= 70){
       return ('you got a C');
     } else if (letterGrade >= 60){
       return ('you got a D');
