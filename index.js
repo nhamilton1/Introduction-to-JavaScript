@@ -126,7 +126,7 @@ function hungryDog(weight,age){
     if (age <= .33){
       food = weight * .10;
     } else if (age <= 1)
-    food = weight *.04
+      food = weight *.04
   }
   return food
 }
@@ -167,7 +167,7 @@ function game(user, computer){
   if (user === computer){
     return `it's a tie`;
   } else if (user === 'rock' && computer === 'scissor'){
-    return 'you win!'
+    return 'you win!';
   }else if (user === 'paper' && computer === 'rock'){
     return 'you win!';
   }else if (user === 'scissors' && computer === 'paper'){
@@ -205,8 +205,8 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(){
+
 }
 
 
@@ -226,7 +226,7 @@ function annoyingSong(number){
     return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`; 
   }
 }
-console.log('task 6', annoyingSong(99))
+// console.log('task 6', annoyingSong(99))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -244,7 +244,18 @@ Using the grade function below do the following:
 */
 
 function grade(/*Your Code here */){
-/*Your Code here */
+  let letterGrade;
+    if (letterGrade >= 90){
+      return ('you got an A');
+    } else if (letterGrade <= 89){
+      return ('you got a B');
+    } else if (letterGrade <= 79){
+      return ('you got a C');
+    } else if (letterGrade >= 60){
+      return ('you got a D');
+    } else {
+      return ('you got an F')
+    }
 }
 
 
