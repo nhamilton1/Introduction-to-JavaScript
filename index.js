@@ -60,8 +60,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a,b){
+  return a * b;
 }
 
 
@@ -76,8 +76,8 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(dogYears){
+  return dogYears * 7;
 }
 
 
@@ -109,8 +109,26 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight,age){
+  let food;
+  if (age >= 1){
+    if (weight <= 5){
+      food = weight * .05;
+    } else if (weight <= 10){
+      food = weight * .04;
+    } else if ( weight <= 15){
+      food = weight * .03;
+    } else if (weight > 15){
+      food = weight * .02;
+    }
+  }
+  else if (age < 1){
+    if (age <= .33){
+      food = weight * .10;
+    } else if (age <= 1)
+    food = weight *.04
+  }
+  return food
 }
 
 
@@ -136,8 +154,27 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+let computer = Math.random();
+if(computer <= 0.34){
+  computer = 'rock';
+} else if (computer <= 0.67){
+  computer = 'paper';
+} else if (computer > 0.67){
+  computer = 'scissors';
+}
+
 function game(user, computer){
-  /*add your code here*/
+  if (user === computer){
+    return `it's a tie`;
+  } else if (user === 'rock' && computer === 'scissor'){
+    return 'you win!'
+  }else if (user === 'paper' && computer === 'rock'){
+    return 'you win!';
+  }else if (user === 'scissors' && computer === 'paper'){
+    return 'you win!';
+  }else{
+    return 'you lose!';
+  }
 }
 
 
@@ -153,8 +190,9 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(miles){
+  let kmToMiles = 0.621371;
+  return (miles * kmToMiles);
 }
 
 
@@ -183,10 +221,12 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(number){
+  for(let i = number; i > 0; i-- ){
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`; 
+  }
 }
-
+console.log('task 6', annoyingSong(99))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
